@@ -20,7 +20,7 @@ function secondsToMinutesSeconds(seconds){
 
 async function getSongs(folder){
     currFolder = folder
-    let a = await fetch(`https://github.com/RamakrushnaBarik/A-song-website/tree/main/songs/${folder}/`)
+    let a = await fetch(`https://github.com/RamakrushnaBarik/${folder}/`)
     let response = await a.text()
     let div = document.createElement("div")
     div.innerHTML = response
@@ -61,7 +61,7 @@ async function getSongs(folder){
 
 // playing the music 
 const playMusic = (track, pause=false)=>{
-    // let audio = new Audio("/spotify_clone_project/songs/" + track)
+    // let audio = new Audio("/tree/main/songs/spotify_clone_project/songs/" + track)
     currentSong.src = `/${currFolder}/` + track
     if(!pause){
         currentSong.play()
@@ -174,7 +174,7 @@ async function main(){
     //load the playlist whenever card is clicked
     Array.from(document.getElementsByClassName("card")).forEach(e=>{
         e.addEventListener("click", async item=>{
-            songs = await getSongs(`spotify_clone_project/songs/${item.currentTarget.dataset.folder}`)
+            songs = await getSongs(`tree/main/songs/spotify_clone_project/songs/${item.currentTarget.dataset.folder}`)
             playMusic(songs[0])
         })
     })
