@@ -1,0 +1,22 @@
+.border{
+    border: 2px solid red;
+}
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-grey{
+    background-color: #121212;
+    /* height: 104px; */
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 0px 10px 10px;
+}
